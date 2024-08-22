@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anxiety Self Assessment - GAD-7</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .heading-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .heading-box h2, .heading-box h4 {
+            margin: 0;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options {
+            margin-top: 10px;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+        }
+        .result {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e0f7fa;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .result h2, .result h4 {
+            text-align: center;
+        }
+        .result p {
+            margin: 10px 0;
+            text-align: justify;
+        }
+        .result .tips {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        @media print {
+            .heading-box, .question, button {
+                display: none;
+            }
+            .result {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading-box">
+            <h2>Anxiety Self Assessment</h2>
+            <h4>"Make Your Assessment Today And Get To Know Your Stage"</h4>
+        </div>
+        <form id="assessment-form">
+            <div class="question">
+                <label>1. Feeling nervous, anxious, or on edge</label>
+                <div class="options">
+                    <input type="radio" id="q1_0" name="q1" value="0">
+                    <label for="q1_0">Not at all</label>
+                    <input type="radio" id="q1_1" name="q1" value="1">
+                    <label for="q1_1">Several days</label>
+                    <input type="radio" id="q1_2" name="q1" value="2">
+                    <label for="q1_2">More than a day</label>
+                    <input type="radio" id="q1_3" name="q1" value="3">
+                    <label for="q1_3">Nearly every day</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>2. Not being able to stop or control worrying</label>
+                <div class="options">
+                    <input type="radio" id="q2_0" name="q2" value="0">
+                    <label for="q2_0">Not at all</label>
+                    <input type="radio" id="q2_1" name="q2" value="1">
+                    <label for="q2_1">Several days</label>
+                    <input type="radio" id="q2_2" name="q2" value="2">
+                    <label for="q2_2">More than a day</label>
+                    <input type="radio" id="q2_3" name="q2" value="3">
+                    <label for="q2_3">Nearly every day</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>3. Worrying too much about different things</label>
+                <div class="options">
+                    <input type="radio" id="q3_0" name="q3" value="0">
+                    <label for="q3_0">Not at all</label>
+                    <input type="radio" id="q3_1" name="q3" value="1">
+                    <label for="q3_1">Several days</label>
+                    <input type="radio" id="q3_2" name="q3" value="2">
+                    <label for="q3_2">More than a day</label>
+                    <input type="radio" id="q3_3" name="q3" value="3">
+                    <label for="q3_3">Nearly every day</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>4. Trouble relaxing</label>
+                <div class="options">
+                    <input type="radio" id="q4_0" name="q4" value="0">
+                    <label for="q4_0">Not at all</label>
+                    <input type="radio" id="q4_1" name="q4" value="1">
+                    <label for="q4_1">Several days</label>
+                    <input type="radio" id="q4_2" name="q4" value="2">
+                    <label for="q4_2">More than a day</label>
+                    <input type="radio" id="q4_3" name="q4" value="3">
+                    <label for="q4_3">Nearly every day</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>5. Being so restless that it is hard to sit still</label>
+                <div class="options">
+                    <input type="radio" id="q5_0" name="q5" value="0">
+                    <label for="q5_0">Not at all</label>
+                    <input type="radio" id="q5_1" name="q5" value="1">
+                    <label for="q5_1">Several days</label>
+                    <input type="radio" id="q5_2" name="q5" value="2">
+                    <label for="q5_2">More than a day</label>
+                    <input type="radio" id="q5_3" name="q5" value="3">
+                    <label for="q5_3">Nearly every day</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>6. Becoming easily annoyed or irritable</label>
+                <div class="options">
+                    <input type="radio" id="q6_0" name="q6" value="0">
+                    <label for="q6_0">Not at all</label>
+                    <input type="radio" id="q6_1" name="q6" value="1">
+                    <label for="q6_1">Several days</label>
+                    <input type="radio" id="q6_2" name="q6" value="2">
+                    <label for="q6_2">More than a day</label>
+                    <input type="radio" id="q6_3" name="q6" value="3">
+                    <label for="q6_3">Nearly every day</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>7. Feeling afraid, as if something awful might happen</label>
+                <div class="options">
+                    <input type="radio" id="q7_0" name="q7" value="0">
+                    <label for="q7_0">Not at all</label>
+                    <input type="radio" id="q7_1" name="q7" value="1">
+                    <label for="q7_1">Several days</label>
+                    <input type="radio" id="q7_2" name="q7" value="2">
+                    <label for="q7_2">More than a day</label>
+                    <input type="radio" id="q7_3" name="q7" value="3">
+                    <label for="q7_3">Nearly every day</label>
+                </div>
+            </div>
+            <button style="background-color: #007bff; color: white; padding: 10px 20px; border: 2px solid black; border-radius: 10px; cursor: pointer; margin-top: 10px;  font-size: 15px; text-align: center; height:50px; width:500px; " type="button" onclick="calculateResult()">Submit</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+      function calculateResult() {
+          const form = document.getElementById('assessment-form');
+          const resultDiv = document.getElementById('result');
+          let totalScore = 0;
+          let allAnswered = true;
+
+          for (let i = 1; i <= 7; i++) {
+              const radios = form['q' + i];
+              let questionAnswered = false;
+              for (let radio of radios) {
+                  if (radio.checked) {
+                      totalScore += parseInt(radio.value);
+                      questionAnswered = true;
+                      break;
+                  }
+              }
+              if (!questionAnswered) {
+                  allAnswered = false;
+                  break;
+              }
+          }
+
+          if (!allAnswered) {
+              alert("Please answer every question.");
+              return;
+          }
+
+          let resultText = '';
+          let tips = '';
+          if (totalScore >= 0 && totalScore <= 4) {
+              resultText = 'Minimal anxiety';
+              tips = `
+                  <ol style="text-align: justify;">
+                      <li>Maintain a balanced diet and regular exercise.</li><br>
+                      <li>Practice mindfulness and meditation.</li><br>
+                      <li>Stay socially connected with friends and family.</li><br>
+                      <li>Engage in hobbies and activities you enjoy.</li><br>
+                      <li>Ensure you get enough sleep each night.</li><br>
+                  </ol>
+              `;
+          } else if (totalScore >= 5 && totalScore <= 9) {
+              resultText = 'Mild anxiety';
+              tips = `
+                  <ol style="text-align: justify;">
+                      <li>Incorporate stress-relieving activities like yoga or walking.</li><br>
+                      <li>Talk to someone you trust about your feelings.</li><br>
+                      <li>Limit caffeine and alcohol intake.</li><br>
+                      <li>Practice deep breathing exercises.</li><br>
+                      <li>Set aside time for relaxation and self-care.</li><br>
+                  </ol>
+              `;
+          } else if (totalScore >= 10 && totalScore <= 14) {
+              resultText = 'Moderate anxiety';
+              tips = `
+                  <ol style="text-align: justify;">
+                      <li>Consider speaking with a mental health professional.</li><br>
+                      <li>Keep a journal to track your thoughts and feelings.</li><br>
+                      <li>Develop a routine that includes relaxation techniques.</li><br>
+                      <li>Join a support group for anxiety.</li><br>
+                      <li>Focus on maintaining a healthy work-life balance.</li><br>
+                  </ol>
+              `;
+          } else if (totalScore >= 15 && totalScore <= 21) {
+              resultText = 'Severe anxiety';
+              tips = `
+                  <ol style="text-align: justify;">
+                      <li>Seek support from a mental health professional immediately.</li><br>
+                      <li>Join a chat room or support group for more help.</li><br>
+                      <li>Practice regular physical activity to reduce stress.</li><br>
+                      <li>Explore relaxation techniques like progressive muscle relaxation.</li><br>
+                      <li>Avoid substances that can increase anxiety, such as caffeine.</li><br>
+                  </ol>
+              `;
+          }
+
+          resultDiv.innerHTML = `
+              <div style="text-align: center; font-family: 'Milkshake', cursive; font-size: 15px;">
+                  <h2>Result Page For Mental Assessment</h2>
+                  <p><b>Your total score:</b>${totalScore}</p>
+                  <p><b>Level Of Mental Health:</b> ${resultText}</p>
+                  <div class="tips" style="text-align: center;">
+                      <h2>Tips for a better life</h2>
+                      ${tips}
+                  </div>
+                  <button style="background-color: #007bff; color: white; padding: 10px 20px; border: 2px solid black; border-radius: 10px; cursor: pointer; margin-top: 10px; font-size: 15px; text-align: center; height:50px; width:500px; " onclick="window.print()">Print Result</button>
+              </div>
+          `;
+          resultDiv.style.display = 'block';
+      }
+  </script>
+
+</body>
+</html>

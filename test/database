@@ -1,0 +1,16 @@
+CREATE DATABASE gad7_db;
+
+USE gad7_db;
+
+CREATE TABLE gad7_results (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    q1 INT NOT NULL,
+    q2 INT NOT NULL,
+    q3 INT NOT NULL,
+    q4 INT NOT NULL,
+    q5 INT NOT NULL,
+    q6 INT NOT NULL,
+    q7 INT NOT NULL,
+    total_score INT NOT NULL,
+    submission_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

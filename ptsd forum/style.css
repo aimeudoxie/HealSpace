@@ -1,0 +1,126 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 15px;
+}
+
+.panel {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border: none;
+}
+
+.panel-body {
+    padding: 20px;
+}
+
+.panel-body h3,
+.panel-body h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-box {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-box .comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-box .comment-header img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.comment-box .comment-header h5 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.comment-box .comment-body {
+    font-size: 16px;
+    color: #333;
+}
+
+.comment-box .comment-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.comment-box .comment-footer .reply-btn {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.comment-box .comment-footer .reply-btn:hover {
+    text-decoration: underline;
+}
+
+#load-more-btn {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+#load-more-btn:hover {
+    background-color: #0056b3;
+}
+
+.table {
+    background-color: #edfafa;
+    border: 0px;
+    border-radius: 10px;
+}

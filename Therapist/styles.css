@@ -1,0 +1,736 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+:root{
+  --pink-color:#263238;
+  --pink-dark:#263238;
+}
+
+body{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background:#dfeaea;
+  padding: 0 10px;
+}
+.wrapper{
+  background:#ecf0f0;
+  max-width:600px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+              0 32px 64px -48px rgba(0,0,0,0.5);
+              color: #fff !important;
+}
+
+/* Login & Signup Form CSS Start */
+.form{
+  padding: 25px 30px;
+}
+.form header{
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #26ABA3;
+  color: #26ABA3;
+}
+.form form{
+  margin: 20px 0;
+}
+.form form .error-text{
+  color: #721c24;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 5px;
+  background: #f8d7da;
+  border: 1px solid #721c24;
+  margin-bottom: 10px;
+  display: none;
+}
+.form form .name-details{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.form form .name-details .field{
+  width: 45%;
+}
+/* .form .name-details .field:first-child{
+  margin-right: 10px;
+}
+.form .name-details .field:last-child{
+  margin-left: 10px;
+} */
+.form form .field{
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+  position: relative;
+}
+.form form .field label{
+  margin-bottom: 2px;
+  color: #292b2b;
+}
+.form form .input input{
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0 10px;
+  position: relative;
+  border-radius: 5px;
+  border: none;
+  background: transparent;
+  color: #292b2b;
+}
+.form form .input input::placeholder{
+    color: #ccc;
+    }
+    .form form .input::before{
+    content: '';
+    position: absolute;
+    bottom:0px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background:#26ABA3;
+    display: block;
+    z-index: 10;
+    transition: all 0.2s ease;
+    }
+.form form .input textarea{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    background: transparent;
+    color: #292b2b;
+  }
+  .form form .input textarea::placeholder{
+    color: #ccc;
+    }
+    .form form .textarea::before{
+    content: '';
+    position: absolute;
+    bottom:0px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background:#26ABA3;
+    display: block;
+    z-index: 10;
+    transition: all 0.2s ease;
+    }
+.form form .field input{
+  outline: none;
+}
+.form form .image input{
+  font-size: 17px;
+  color: #292b2b;
+}
+.profile-image{
+  display: none;
+}
+.form form .button input{
+  height: 45px;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  background: #26ABA3;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 13px;
+  transition: all .5s ease;
+}
+.form form .button input:hover{
+background: #fff;
+color:#26ABA3;
+border: 1px solid #26ABA3;
+}
+.form form .field i{
+  position: absolute;
+  right: 15px;
+  top: 70%;
+  color: #ccc;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.form form .field i.active::before{
+  color: var(--pink-color);
+  content: "\f070";
+}
+.form .link{
+  text-align: center;
+  margin: 10px 0;
+  font-size: 17px;
+  color: #292b2b;
+}
+.form .link a{
+  color: #26ABA3;
+  margin-left: .5rem;
+}
+.form .link a:hover{
+  text-decoration: underline;
+}
+/* Styling the select element to match the input fields */
+.form form .input select {
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0 10px;
+  position: relative;
+  border-radius: 5px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  appearance: none; /* Removes default arrow for cross-browser consistency */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Adding some background and custom arrow */
+.form form .input select {
+  color: #292b2b;
+  background: transparent url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%224%22 height%3D%225%22 viewBox%3D%220 0 4 5%22%3E%3Cpath fill%3D%22%23fff%22 d%3D%22M2 0L0 2h4zm0 5L0 3h4z%22/%3E%3C/svg%3E') no-repeat right 10px center;
+}
+
+/* Optionally, you can style the options as well */
+.form form .input select option {
+  color: #000; /* Options text color */
+  background: #fff; /* Options background color */
+}
+
+/* Ensuring consistent style for the dropdown arrow */
+.form form .input select::-ms-expand {
+  display: none; /* Hide the default dropdown arrow in IE */
+  color: #292b2b;
+}
+
+/* Optional: Style for focus state to match inputs */
+.form form .input select:focus {
+  color: #292b2b;
+  outline: none; /* Remove default focus outline */
+ /* Add custom focus shadow */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Users List CSS Start */
+.user_wrapper{
+  background: #f2f5f5;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+              0 32px 64px -48px rgba(0,0,0,0.5);
+}
+.users{
+  padding: 25px 30px;
+  
+}
+.users header,
+.users-list a{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #292b2b;
+  justify-content: space-between;
+  color: #292b2b !important;
+}
+.wrapper img{
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--pink-color);
+}
+.users header img{
+  height: 60px;
+  width: 60px;
+}
+:is(.users, .users-list) .content{
+  display: flex;
+  align-items: center;
+}
+:is(.users, .users-list) .content .details{
+  color: #292b2b !important;
+  margin-left: 20px;
+}
+:is(.users, .users-list) .details span{
+  font-size: 18px;
+  font-weight: 500;
+}
+.users header .logout{
+  display: block;
+  background: #26ABA3;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 7px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 17px;
+}
+.users .search{
+  margin: 20px 0;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+.users .search .text{
+  font-size: 18px;
+  color: #292b2b;
+}
+.users .search input{
+  position: absolute;
+  height: 42px;
+  width: calc(100% - 50px);
+  font-size: 16px;
+  padding: 0 13px;
+  border: 1px solid #292b2b;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+.users .search input:focus{
+  border: 1px solid var(--pink-color);
+}
+.users .search input.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+.users .search button{
+  position: relative;
+  z-index: 1;
+  width: 47px;
+  height: 42px;
+  font-size: 17px;
+  cursor: pointer;
+  border: none;
+  background:#26ABA3;
+  color: #fff;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+  transition: all 0.2s ease;
+}
+.users .search button.active{
+  background: #26ABA3;
+  color: #FFF;
+}
+.search button.active i::before{
+  content: '\f00d';
+}
+.users-list{
+  max-height: 350px;
+  overflow-y: auto;
+  color: #292b2b;
+}
+:is(.users-list, .chat-box)::-webkit-scrollbar{
+  width: 0px;
+  color: #292b2b
+}
+.users-list a{
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  padding-right: 15px;
+  border-bottom-color: #292b2b;
+}
+.users-list a:last-child{
+  margin-bottom: 0px;
+  border-bottom: none;
+}
+.users-list a img{
+  height: 45px;
+  width: 45px;
+}
+.users-list a .details p{
+  color: #292b2b;
+}
+.users-list a .status-dot{
+  font-size: 12px;
+  color:  forestgreen;
+  padding-left: 10px;
+  
+}
+.users-list a .status-dot.offline{
+  color: #4f5050;
+}
+
+
+
+.profile{
+  background: #f2f5f5;
+
+    max-width: 60%;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+
+}
+.profile-area header{
+  display: flex;
+  align-items: flex-start;
+  padding: 18px 30px;
+  position: relative;
+  flex-direction: column;
+}
+.profile-area header .back-icon{
+  color: #292b2b;
+  font-size: 18px;
+}
+.profile-area header img{
+  height: 100px;
+  width: 120px;
+  margin: 0 15px;
+  border-radius: 5px;
+}
+.profile-area header .details span{
+  color: #292b2b;
+font-size: 25px;
+font-weight: 500;
+}
+.profile-area header .details p{
+  color: #292b2b;
+font-size: 17px;
+font-weight: 400;
+}
+.profile-area header .details p b{
+    color: #292b2b;
+  font-size: 20px;
+  font-weight: 500;
+  }
+.profile-area header .details span a{
+text-decoration: none;
+font-size: 17px;
+font-weight: 500;
+}
+
+
+
+
+
+.profile-area .patient-records{
+  display: flex;
+  align-items: flex-start;
+  padding: 18px 30px;
+  position: relative;
+  flex-direction: column;
+}
+.profile-area .patient-records .back-icon{
+  color: #292b2b;
+  font-size: 18px;
+}
+.profile-area .patient-records img{
+  height: 100px;
+  width: 120px;
+  margin: 0 15px;
+  border-radius: 5px;
+}
+.profile-area .patient-records h2{
+  color: #292b2b;
+font-size: 25px;
+font-weight: 500;
+}
+.profile-area .patient-records .record p{
+  color: #292b2b;
+font-size: 17px;
+font-weight: 400;
+}
+.profile-area .patient-records .record p b{
+    color: #292b2b;
+  font-size: 20px;
+  font-weight: 500;
+  }
+.profile-area .patient-records .record span a{
+text-decoration: none;
+font-size: 17px;
+font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Chat Area CSS Start */
+.chating{
+  background: #f2f5f5;
+
+    max-width: 80%;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+
+}
+.chat-area header{
+  display: flex;
+  align-items: center;
+  padding: 18px 30px;
+  position: relative;
+}
+.chat-area header .back-icon{
+  color: #292b2b;
+  font-size: 18px;
+}
+.chat-area header img{
+  height: 45px;
+  width: 45px;
+  margin: 0 15px;
+}
+.chat-area header .details  a{
+    color: #26ABA3;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  padding-left: 80px;
+}
+.chat-area header .details span{
+    color: #292b2b;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.chat-area header .details p{
+    color: #292b2b;
+  font-size: 17px;
+  font-weight: 500;
+}
+.chat-area header .details span a{
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+.chat-area header .theme{
+position: absolute;
+right: 40px;
+top: 50%;
+transform: translateY(-50%);
+}
+.chat-area header .theme i{
+font-size: 25px;
+cursor: pointer;
+}
+.chat-area header .theme #night.active::before{
+content: '\f185';
+}
+
+
+
+.chat-box{
+  position: relative;
+  min-height: 380px;
+  max-height: 450px;
+  overflow-y: auto;
+  padding: 10px 30px 20px 30px;
+  background: #c6e0de;
+  box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
+              inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
+}
+.chat-box .text{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: calc(100% - 50px);
+  text-align: center;
+  transform: translate(-50%, -50%);
+  color: #000;
+}
+.chat-box .chat{
+  margin: 15px 0;
+}
+.chat-box .chat p{
+  word-wrap: break-word;
+  padding: 8px 16px;
+  box-shadow: 0 0 45px rgb(0 0 0 / 14%),
+              0rem 25px 25px -25px rgb(0 0 0 / 19%);
+}
+
+.chat-box .outgoing .details{
+  margin-left: auto;
+  max-width: calc(100% - 130px);
+}
+.outgoing .details p{
+  background: #26ABA3;
+  color: #fff;
+  border-radius: 18px 18px 0 18px;
+}
+.chat-box .incoming{
+  display: flex;
+  align-items: flex-end;
+}
+.chat-box .incoming img{
+  height: 35px;
+  width: 35px;
+}
+.chat-box .outgoing img{
+  height: 35px;
+  width: 35px;
+}
+.chat-box .outgoing{
+  display: flex;
+  align-items: flex-end;
+}
+.chat-box .incoming .details{
+  margin-right: auto;
+  margin-left: 10px;
+  max-width: calc(100% - 130px);
+}
+.chat-box .outgoing .details{
+  margin-right: auto;
+  margin-right: 10px;
+  max-width: calc(100% - 130px);
+}
+.incoming .details p{
+  background:#efefef;
+  color: #333;
+  border-radius: 18px 18px 18px 0;
+}
+.typing-area{
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.typing-area input{
+  height: 45px;
+  width: calc(100% - 58px);
+  font-size: 16px;
+  padding: 0 13px;
+  border: 1px solid #e6e6e6;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+}
+.typing-area input:focus{
+  border: 1px solid var(--pink-color);
+}
+.typing-area button{
+  color: #fff;
+  width: 55px;
+  border: none;
+  outline: none;
+  background: #26ABA3;
+  font-size: 19px;
+  cursor: pointer;
+  opacity: 0.7;
+  pointer-events: none;
+  border-radius: 0 5px 5px 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 100;
+}
+.typing-area button:hover{
+  background: var(--pink-dark);
+}
+.typing-area button.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* Responive media query */
+@media screen and (max-width: 550px) {
+  .chat-box .outgoing .details{
+    margin-left: auto;
+    max-width: calc(100% - 30px);
+  }
+  .chat-box .incoming .details{
+    margin-right: auto;
+    margin-left: 10px;
+    max-width: calc(100% - 30px);
+  }
+  .chating{
+    max-width: 98%;
+    width: 100%;
+}
+  .wrapper {
+    margin: 1rem 0;
+  }
+  .form, .users{
+    padding: 20px;
+  }
+  .form header{
+    text-align: center;
+  }
+  .form form .name-details{
+    flex-direction: column;
+  }
+  .form form .name-details .field{
+    width: 100%;
+  }
+
+  .users header img{
+    height: 45px;
+    width: 45px;
+  }
+  .users header .logout{
+    padding: 6px 10px;
+    font-size: 16px;
+  }
+  :is(.users, .users-list) .content .details{
+    margin-left: 15px;
+  }
+
+  .users-list a{
+    padding-right: 10px;
+  }
+
+  .chat-area header{
+    padding: 15px 20px;
+  }
+  .chat-box{
+    min-height: 400px;
+    padding: 10px 15px 15px 20px;
+  }
+
+  .chat-box .chat p{
+    font-size: 15px;
+  }
+  .chat-box .outogoing .details{
+    max-width: 230px;
+  }
+  .chat-box .incoming .details{
+    max-width: 265px;
+  }
+  .incoming .details img{
+    height: 30px;
+    width: 30px;
+  }
+  .chat-area form{
+    padding: 20px;
+  }
+  .chat-area form input{
+    height: 40px;
+    width: calc(100% - 48px);
+  }
+  .chat-area form button{
+    width: 45px;
+  }
+}
